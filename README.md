@@ -4,7 +4,7 @@ A defrag-style, real-time file activity monitor for code repositories. Every fil
 
 ![Repo Visualizer Screenshot](Screenshot.png)
 
-<video src="https://github.com/Milad-Afdasta/REPO-VISUALIZER/raw/main/demo.mov" controls width="100%"></video>
+<video src="https://github.com/user-attachments/assets/9471af79-0e97-42a9-891d-7276082c1708" controls width="100%"></video>
 
 ---
 
