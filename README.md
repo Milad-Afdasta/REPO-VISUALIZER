@@ -1,6 +1,6 @@
 # Repo Visualizer
 
-A defrag-style, real-time file activity monitor for code repositories. Every file in your project becomes a color-coded block on a live grid — watch exactly where an AI agent or developer is working, moment by moment.
+A defrag-style, real-time file activity monitor for code repositories. Every file in your project becomes a color-coded block on a live grid — watch exactly where an AI agent is working, moment by moment.
 
 ![Repo Visualizer Screenshot](Screenshot.png)
 
