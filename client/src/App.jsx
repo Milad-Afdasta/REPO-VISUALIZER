@@ -13,7 +13,7 @@ const STATE_META = {
   new:     { label: 'NEW',     cssClass: 'new'     },
 };
 
-const HEAT_LEVELS = 20;
+const HEAT_SCALE = 100; // touches to reach max brightness (keeps growing beyond this)
 
 // Interpolate between two hex colors, returns rgb() string
 function lerpColor(hex1, hex2, t) {
@@ -27,11 +27,11 @@ function lerpColor(hex1, hex2, t) {
   return `rgb(${Math.round(r1 + (r2 - r1) * t)},${Math.round(g1 + (g2 - g1) * t)},${Math.round(b1 + (b2 - b1) * t)})`;
 }
 
-// Returns inline style override for idle blocks based on touch count (1–20+)
-// Uses a sqrt curve so early touches are more visible
+// Returns inline style override for idle blocks based on touch count
+// Uses a sqrt curve so early touches are visible; fully bright at HEAT_SCALE touches
 function heatStyle(count) {
   if (!count) return null;
-  const t = Math.sqrt(Math.min(count, HEAT_LEVELS) / HEAT_LEVELS);
+  const t = Math.min(Math.sqrt(count / HEAT_SCALE), 1);
   return {
     backgroundColor: lerpColor('#111125', '#2d0d5e', t),
     color:           lerpColor('#5a5a8a', '#dd88ff', t),
